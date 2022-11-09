@@ -22,5 +22,7 @@ public class HomePage {
         this.driver.manage().window().maximize();
     }
 
+    //mapiranje elemenata
+
 
 }
