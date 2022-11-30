@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ff4da7c-3173-4e92-9f61-a6913c81ad28" name="Changes" comment="added cartPage class.">
+    <list default="true" id="4ff4da7c-3173-4e92-9f61-a6913c81ad28" name="Changes" comment="completed login method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="LoginTests.verifyLoginWithTestUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoBlazeTest" />
@@ -106,7 +107,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added baseTest and User classes." />
     <MESSAGE value="added cartPage class." />
-    <option name="LAST_COMMIT_MESSAGE" value="added cartPage class." />
+    <MESSAGE value="completed login method." />
+    <option name="LAST_COMMIT_MESSAGE" value="completed login method." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

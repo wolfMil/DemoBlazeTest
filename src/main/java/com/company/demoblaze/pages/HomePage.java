@@ -37,58 +37,30 @@ public class HomePage {
         getLoginBtnFromNavBar().click();
     }
 
-    List<WebElement> ModalLoginDialogWebElements = this.driver.findElements(By.xpath("//div[@class='modal-content']"));
-
-    public WebElement getUsernameFieldWebElement() {
-        WebElement toReturn = null;
-        for (int i = 0; i < ModalLoginDialogWebElements.size(); i++) {
-            WebElement tempElement = ModalLoginDialogWebElements.get(i).findElement(By.xpath("//input[@id='loginusername']"));
-            toReturn = tempElement;
-            break;
-        }
-        return toReturn;
+    public WebElement getUsernameFieldModal() {
+        return driver.findElement(By.xpath("//input[@id='loginusername']"));
     }
 
-    public WebElement getPasswordFieldWebElement() {
-        WebElement toReturn = null;
-        for (int i = 0; i < ModalLoginDialogWebElements.size(); i++) {
-            WebElement tempElement = ModalLoginDialogWebElements.get(i).findElement(By.xpath("//input[@id='loginpassword']"));
-            toReturn = tempElement;
-            break;
-        }
-        return toReturn;
+    public WebElement getPasswordFieldModal() {
+        return driver.findElement(By.xpath("//input[@id='loginpassword']"));
     }
 
-    public WebElement getLoginBtnInModalDialog() {
-        WebElement toReturn = null;
-        for (int i = 0; i < ModalLoginDialogWebElements.size(); i++) {
-            WebElement tempElement = ModalLoginDialogWebElements.get(i).findElement(By.xpath("//button[@onclick='logIn()']"));
-            toReturn = tempElement;
-            break;
-        }
-        return toReturn;
+    public WebElement getLoginButton() {
+        return driver.findElement(By.xpath("//button[@onclick='logIn()']"));
     }
 
-    public void setUsername(String username) {
-        this.getUsernameFieldWebElement().click();
-        this.getUsernameFieldWebElement().sendKeys(username);
+    public void enterUsername(String username) {
+        this.getUsernameFieldModal().sendKeys(username);
     }
 
-    public void setPassword(String password) {
-        this.getPasswordFieldWebElement().click();
-        this.getPasswordFieldWebElement().sendKeys(password);
+    public void enterPassword(String password) {
+        this.getPasswordFieldModal().sendKeys(password);
     }
 
-    public void clickOnLogin() {
-        this.getLoginBtnInModalDialog().click();
+    public void login(String username, String password) {
+        this.getUsernameFieldModal().sendKeys(username);
+        this.getPasswordFieldModal().sendKeys(password);
+        this.getLoginButton().click();
     }
-
-    public void login(User user) {
-        this.setUsername(user.getUsername());
-        this.setPassword(user.getPassword());
-        this.getLoginBtnInModalDialog().click();
-    }
-
-
 
 }

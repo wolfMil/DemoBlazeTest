@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\rt42\\Downloads\\webDrivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\MountainX\\Downloads\\webDrivers\\chromedriver.exe");
         driver = new ChromeDriver();
     }
 
@@ -20,5 +20,4 @@ public class BaseTest {
         driver.close();
         driver.quit();
     }
-
 }

@@ -14,7 +14,12 @@ public class LoginTests extends BaseTest {
 
         homePage.getLoginBtnFromNavBar();
         homePage.openModalLoginDialog();
-        homePage.login(new User("test", "test"));
+
+        homePage.getUsernameFieldModal();
+        homePage.getPasswordFieldModal();
+
+        homePage.login("test", "test");
+
     }
 
 
