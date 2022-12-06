@@ -2,7 +2,6 @@ package com.company.demoblaze.tests;
 
 import com.company.demoblaze.models.User;
 import com.company.demoblaze.pages.HomePage;
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
