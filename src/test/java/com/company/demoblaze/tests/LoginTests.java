@@ -3,6 +3,7 @@ package com.company.demoblaze.tests;
 import com.company.demoblaze.models.User;
 import com.company.demoblaze.pages.HomePage;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class LoginTests extends BaseTest {
@@ -15,12 +16,15 @@ public class LoginTests extends BaseTest {
         homePage.getLoginBtnFromNavBar();
         homePage.openModalLoginDialog();
 
-        homePage.getUsernameFieldModal();
-        homePage.getPasswordFieldModal();
+        User user1 = new User("test", "test");
+        homePage.login(user1);
 
-        homePage.login("test", "test");
-
+        Assert.assertEquals(homePage.logoutBtnIsDisplayed(), true, "You're successfully logged in!");
     }
 
+    @Test
+    public void addToCartTest() {
+
+    }
 
 }

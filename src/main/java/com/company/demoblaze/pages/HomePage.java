@@ -37,6 +37,7 @@ public class HomePage {
         getLoginBtnFromNavBar().click();
     }
 
+    //lociranje elemenata
     public WebElement getUsernameFieldModal() {
         return driver.findElement(By.xpath("//input[@id='loginusername']"));
     }
@@ -49,6 +50,11 @@ public class HomePage {
         return driver.findElement(By.xpath("//button[@onclick='logIn()']"));
     }
 
+    public WebElement getLogoutButton() {
+        return driver.findElement(By.xpath("//a[@id='logout2']"));
+    }
+
+    //akcije sa elementima
     public void enterUsername(String username) {
         this.getUsernameFieldModal().sendKeys(username);
     }
@@ -57,10 +63,29 @@ public class HomePage {
         this.getPasswordFieldModal().sendKeys(password);
     }
 
+    public void clickOnLogin() {
+        this.getLoginButton().click();
+    }
+
+    public boolean logoutBtnIsDisplayed() {
+        boolean toReturn = false;
+        WebElement logoutButton = driver.findElement(By.xpath("//a[@id='logout2']"));
+        if (logoutButton != null) {
+            toReturn = true;
+        }
+        return toReturn;
+    }
+
     public void login(String username, String password) {
         this.getUsernameFieldModal().sendKeys(username);
         this.getPasswordFieldModal().sendKeys(password);
-        this.getLoginButton().click();
+        this.clickOnLogin();
+    }
+
+    public void login(User user) {
+        this.enterUsername(user.getUsername());
+        this.enterPassword(user.getPassword());
+        this.clickOnLogin();
     }
 
 }
