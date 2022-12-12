@@ -1,6 +1,10 @@
 package com.company.demoblaze.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import java.util.List;
 
 public class ProductsPage {
 
@@ -25,4 +29,8 @@ public class ProductsPage {
 
     //mapiranje elemenata
 
+    public List<WebElement> getInventoryList() {
+        WebElement inventoryList = this.driver.findElement(By.xpath("//div[@id='tbodyid']"));
+        return inventoryList.findElements(By.xpath("//div[@class='card h-100']"));
+    }
 }

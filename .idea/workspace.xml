@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ff4da7c-3173-4e92-9f61-a6913c81ad28" name="Changes" comment="completed login method with assert tested successfully.">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="4ff4da7c-3173-4e92-9f61-a6913c81ad28" name="Changes" comment="started products page">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/ProductsTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/CartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/HomePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/ProductsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/company/demoblaze/pages/ProductsPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/LoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/company/demoblaze/tests/LoginTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,7 +49,7 @@
       <recent name="com.company.demoblaze.pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="TestNG.ProductsTests.getListOfProducts">
     <configuration name="LoginTests.verifyLoginWithTestUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoBlazeTest" />
       <extension name="coverage">
@@ -66,8 +68,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProductsTests" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoBlazeTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.demoblaze.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.demoblaze.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.company.demoblaze.tests.ProductsTests" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductsTests.getListOfProducts" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoBlazeTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.demoblaze.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.company.demoblaze.tests" />
+      <option name="MAIN_CLASS_NAME" value="com.company.demoblaze.tests.ProductsTests" />
+      <option name="METHOD_NAME" value="getListOfProducts" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ProductsTests.getListOfProducts" />
+        <item itemvalue="TestNG.ProductsTests" />
         <item itemvalue="TestNG.LoginTests.verifyLoginWithTestUser" />
       </list>
     </recent_temporary>
@@ -109,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670333120532</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="started products page">
+      <created>1670334836341</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670334836341</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,7 +174,8 @@
     <MESSAGE value="added cartPage class." />
     <MESSAGE value="completed login method." />
     <MESSAGE value="completed login method with assert tested successfully." />
-    <option name="LAST_COMMIT_MESSAGE" value="completed login method with assert tested successfully." />
+    <MESSAGE value="started products page" />
+    <option name="LAST_COMMIT_MESSAGE" value="started products page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

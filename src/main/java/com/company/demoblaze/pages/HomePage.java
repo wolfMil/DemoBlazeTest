@@ -35,6 +35,11 @@ public class HomePage {
 
     public void openModalLoginDialog() {
         getLoginBtnFromNavBar().click();
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     //lociranje elemenata

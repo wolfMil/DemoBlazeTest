@@ -17,6 +17,11 @@ public class BaseTest {
 
     @AfterClass
     public void afterClass() {
+      /*  try {
+            wait(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }*/
         driver.close();
         driver.quit();
     }
