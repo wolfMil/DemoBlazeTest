@@ -27,7 +27,7 @@ public class HomePage {
         this.driver.manage().window().maximize();
     }
 
-    //mapiranje elemenata
+    //mapiranje elemenata *** *** *** *** ***
 
     public WebElement getLoginBtnFromNavBar() {
         return driver.findElement(By.xpath("//a[@id='login2']"));
@@ -36,13 +36,12 @@ public class HomePage {
     public void openModalLoginDialog() {
         getLoginBtnFromNavBar().click();
         try {
-            Thread.sleep(2000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    //lociranje elemenata
     public WebElement getUsernameFieldModal() {
         return driver.findElement(By.xpath("//input[@id='loginusername']"));
     }
@@ -59,7 +58,21 @@ public class HomePage {
         return driver.findElement(By.xpath("//a[@id='logout2']"));
     }
 
-    //akcije sa elementima
+    public List<WebElement> getInventoryList() {
+        WebElement inventoryList = this.driver.findElement(By.xpath("//div[@class='col-lg-9']"));
+        return inventoryList.findElements(By.xpath("//h4[@class='card-title']"));
+
+    }
+    public WebElement getNextPageButton() {
+        return driver.findElement(By.xpath("//button[@id='next2']"));
+    }
+    public WebElement getPreviousPageButton() {
+        return driver.findElement(By.xpath("//button[@id='prev2']"));
+    }
+
+
+    //akcije sa elementima *** *** *** *** ***
+
     public void enterUsername(String username) {
         this.getUsernameFieldModal().sendKeys(username);
     }
@@ -81,6 +94,25 @@ public class HomePage {
         return toReturn;
     }
 
+    public boolean isNextButtonDisplayed() {
+        boolean toReturn = false;
+        if (this.getNextPageButton().getAttribute("style").equals("display: block")) {
+            toReturn = true;
+        } else {
+            toReturn = false;
+        }
+        return toReturn;
+    }
+    public boolean isPrevoiusPageButtonDisplayed() {
+        boolean toReturn = false;
+        if (this.getPreviousPageButton().getAttribute("value").equals("1")) {
+            toReturn = true;
+        } else {
+            toReturn = false;
+        }
+        return toReturn;
+    }
+
     public void login(String username, String password) {
         this.getUsernameFieldModal().sendKeys(username);
         this.getPasswordFieldModal().sendKeys(password);
@@ -91,6 +123,15 @@ public class HomePage {
         this.enterUsername(user.getUsername());
         this.enterPassword(user.getPassword());
         this.clickOnLogin();
+    }
+
+    public void loginToWebPage() {
+        HomePage homePage = new HomePage(driver);
+        homePage.openPage();
+        homePage.getLoginBtnFromNavBar();
+        homePage.openModalLoginDialog();
+        User user1 = new User("test", "test");
+        homePage.login(user1);
     }
 
 }

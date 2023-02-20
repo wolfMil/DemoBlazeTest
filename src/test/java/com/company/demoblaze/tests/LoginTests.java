@@ -10,14 +10,9 @@ public class LoginTests extends BaseTest {
     @Test
     public void verifyLoginWithTestUser() {
         HomePage homePage = new HomePage(driver);
-        homePage.openPage();
-        homePage.getLoginBtnFromNavBar();
-        homePage.openModalLoginDialog();
-        User user1 = new User("test", "test");
-        homePage.login(user1);
+        homePage.loginToWebPage();
 
         Assert.assertEquals(homePage.logoutBtnIsDisplayed(), true, "You're successfully logged in!");
     }
-
 
 }

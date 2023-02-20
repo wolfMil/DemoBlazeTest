@@ -1,7 +1,9 @@
 package com.company.demoblaze.tests;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -11,17 +13,18 @@ public class BaseTest {
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\MountainX\\Downloads\\webDrivers\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
+
     @AfterClass
     public void afterClass() {
-      /*  try {
-            wait(5000);
+        try {
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
-        }*/
+        }
         driver.close();
         driver.quit();
     }

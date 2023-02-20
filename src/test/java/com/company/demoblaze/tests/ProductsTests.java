@@ -1,32 +1,38 @@
 package com.company.demoblaze.tests;
 
-import com.company.demoblaze.models.User;
 import com.company.demoblaze.pages.HomePage;
-import com.company.demoblaze.pages.ProductsPage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProductsTests extends BaseTest {
 
     @Test
     public void getListOfProducts() {
+
         HomePage homePage = new HomePage(driver);
-        homePage.openPage();
-        homePage.getLoginBtnFromNavBar();
-        homePage.openModalLoginDialog();
-        User user1 = new User("test", "test");
-        homePage.login(user1);
+        homePage.loginToWebPage();
 
-        ProductsPage productsPage = new ProductsPage(driver);
-        List<WebElement> listOfItems = productsPage.getInventoryList();
+        List<WebElement> listOfProducts = new ArrayList<>();
 
-        for(WebElement element : listOfItems) {
-            System.out.println(element.getText());
+        while (homePage.isPrevoiusPageButtonDisplayed()) {
+            List<WebElement> items = homePage.getInventoryList();
+            for (int i = 0; i < items.size(); i++) {
+                WebElement e = items.get(i);
+                listOfProducts.add(e);
+            }
+
+            homePage.getNextPageButton().click();
         }
 
+        //List<WebElement> listOfProducts = homePage.getInventoryList();
+
+        for (WebElement e : listOfProducts) {
+            System.out.println(e.getText());
+        }
 
     }
-}
+
+    }
